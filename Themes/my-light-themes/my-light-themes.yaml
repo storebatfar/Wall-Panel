@@ -1,0 +1,665 @@
+my-light-theme-1:
+  # Global
+  background-image: "center / cover no-repeat fixed url('/local/backgrounds/light/bg1.jpg?v=1')"
+  lovelace-background: var(--background-image)
+  primary-color: "#ff9409"
+  light-primary-color: "#2c2c2e"
+  primary-background-color: "#e5e5ea"
+  secondary-background-color: rgba(255, 255, 255, 0.9)
+  divider-color: rgba(142, 142, 147, 0.3)
+  accent-color: rgba(255, 159, 9, 1)
+  icon-farve: "#FFF"
+  icon-farve-2: "#464a47"
+  border-radius-1: 5px
+  box-shadow-on: 0px 2px 5px rgba(0, 0, 0, 0.9)
+  box-shadow-off: 0px 2px 5px rgba(155, 155, 155, 0.9)
+  custom-button-gradient-1: linear-gradient(145deg, rgba(119,132,135,1) 0%, rgba(148,180,186,1) 70%)
+  custom-button-gradient-2: linear-gradient(145deg, rgba(150,0,0,1) 0%, rgba(255,88,46,1) 70%)
+  custom-button-gradient-3: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(92,92,92,1) 70%)
+  custom-button-gradient-4: linear-gradient(145deg, rgba(0,92,0,1) 0%, rgba(0,162,0,1) 70%)
+  custom-button-gradient-5: linear-gradient(145deg, rgba(0,0,140,1) 0%, rgba(88,88,255,1) 70%)
+  custom-button-gradient-6: linear-gradient(145deg, rgba(0,144,193,1) 0%, rgba(51,204,255,1) 70%)
+  custom-button-infobox: rgba(255, 255, 255, 0.3)
+  # Menu
+  menu-background: rgba(255, 255, 255, 0.1)
+  menu-shadow: 0px 0px 60px rgb(34, 37, 42)
+  menu-selected: linear-gradient(145deg, rgba(119,132,135,1) 0%, rgba(148,180,186,1) 70%)
+  menu-selected-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9)
+  menu-justify: center
+  # Light card
+  light-on: linear-gradient(145deg, rgba(119,132,135,1) 0%, rgba(148,180,186,1) 70%)
+  light-off: rgb(255, 255, 255, 0.3)
+  light-chip-on: "#FFF"
+  light-chip-off: rgb(179, 179, 179, 0.7)
+  light-icon-on: "#FFF"
+  light-icon-off: rgb(179, 179, 179, 0.7)
+  light-text-on: "#FFF"
+  light-text-off: rgb(179, 179, 179, 0.7)
+  # Text
+  primary-text-color: "#464a47"
+  secondary-text-color: "#000000"
+  text-primary-color: "#FFF"
+  disabled-text-color: "#555"
+  text-dark-color: "#FFF"
+  # Sidebar Menu
+  sidebar-background-color: var(--primary-background-color)
+  sidebar-icon-color: var(--light-primary-color)
+  sidebar-text-color: var(--light-primary-color)
+  sidebar-selected-background-color: var(--primary-background-color)
+  sidebar-selected-icon-color: "#8e8e93"
+  sidebar-selected-text-color: var(--sidebar-selected-icon-color)
+  # States and Badges
+  state-icon-color: "#FFF"
+  state-icon-active-color: "#333333"
+  state-icon-unavailable-color: var(--disabled-text-color)
+  paper-item-icon-active-color: "#333333"
+  # Sliders
+  paper-slider-knob-color: "#FFFFFF"
+  paper-slider-knob-start-color: var(--paper-slider-knob-color)
+  paper-slider-pin-color: var(--paper-slider-knob-color)
+  paper-slider-active-color: "#007aff"
+  paper-slider-secondary-color: var(--paper-slider-knob-color)
+  paper-slider-container-color: rgba(255, 255, 255, 0.5)
+  paper-slider-font-color: "#000"
+  ha-slider-background: none !important
+  # Labels
+  label-badge-background-color: "#23232E"
+  label-badge-text-color: "#F1F1F1"
+  label-badge-red: rgba(255, 149, 9, 0.7)
+  # Cards
+  card-background-color: var(--secondary-background-color)
+  paper-listbox-background-color: var(--primary-background-color)
+  ha-card-border-radius: 20px
+  ha-card-background: rgba(245, 245, 245, 0.4)
+  paper-card-background-color: var(--ha-card-background)
+  rgb-card-background-color: rgb(245, 245, 245)
+  ha-card-border-width: 0
+  # Toggles
+  paper-toggle-button-checked-button-color: "#484848"
+  paper-toggle-button-checked-bar-color: "#484848"
+  paper-toggle-button-unchecked-button-color: var(--paper-toggle-button-checked-button-color)
+  paper-toggle-button-unchecked-bar-color: var(--disabled-text-color)
+  # Table row
+  table-row-background-color: var(--primary-background-color)
+  table-row-alternative-background-color: var(--secondary-background-color)
+  # Switches
+  switch-checked-color: "#30d257"
+  switch-checked-track-color: "#34c759"
+  switch-checked-button-color: "#FFF"
+  # Other
+  paper-dialog-background-color: rgba(200, 200, 200, 0.8)
+  paper-item-icon-color: "#333333"
+  more-info-header-background: rgba(230, 230, 230, 0.5)
+  lumo-body-text-color: var(--primary-text-color)
+  app-header-background-color: rgba(30, 2, 61, 0.4)
+  markdown-code-background-color: "#FFFFFF"
+  code-editor-background-color: "#FFF"
+  clear-background-color: var(--ha-card-background)
+  # Custom
+  mcg-title-letter-spacing: .15em
+  mini-media-player-base-color: white
+  mini-media-player-icon-color: white
+  input-ink-color: var(--primary-text-color)
+  input-fill-color: transparent
+  input-disabled-fill-color: transparent
+  input-label-ink-color: var(--primary-text-color)
+  input-disabled-ink-color: var(--disabled-text-color)
+  input-dropdown-icon-color: var(--primary-text-color)
+  input-idle-line-color: var(--secondary-text-color)
+  input-hover-line-color: var(--secondary-text-color)
+  codemirror-property: var(--accent-color)
+
+my-light-theme-2:
+  # Global
+  background-image: "center / cover no-repeat fixed url('/local/backgrounds/light/bg2.jpg?v=1')"
+  lovelace-background: var(--background-image)
+  primary-color: "#ff9409"
+  light-primary-color: "#2c2c2e"
+  primary-background-color: "#e5e5ea"
+  secondary-background-color: rgba(255, 255, 255, 0.9)
+  divider-color: rgba(142, 142, 147, 0.3)
+  accent-color: rgba(255, 159, 9, 1)
+  icon-farve: "#FFF"
+  icon-farve-2: "#464a47"
+  border-radius-1: 5px
+  box-shadow-on: 0px 2px 5px rgba(0, 0, 0, 0.9)
+  box-shadow-off: 0px 2px 5px rgba(155, 155, 155, 0.9)
+  custom-button-gradient-1: linear-gradient(145deg, rgba(253,77,29,1) 0%, rgba(255,168,55,1) 70%)
+  custom-button-gradient-2: linear-gradient(145deg, rgba(150,0,0,1) 0%, rgba(255,88,46,1) 70%)
+  custom-button-gradient-3: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(92,92,92,1) 70%)
+  custom-button-gradient-4: linear-gradient(145deg, rgba(0,92,0,1) 0%, rgba(0,162,0,1) 70%)
+  custom-button-gradient-5: linear-gradient(145deg, rgba(0,0,140,1) 0%, rgba(88,88,255,1) 70%)
+  custom-button-gradient-6: linear-gradient(145deg, rgba(0,144,193,1) 0%, rgba(51,204,255,1) 70%)
+  custom-button-infobox: rgba(255, 255, 255, 0.3)
+  # Menu
+  menu-background: rgba(255, 255, 255, 0.1)
+  menu-shadow: 0px 0px 60px rgb(34, 37, 42)
+  menu-selected: linear-gradient(145deg, rgba(253,77,29,1) 0%, rgba(255,168,55,1) 70%)
+  menu-selected-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9)
+  menu-justify: center
+  # Light card
+  light-on: linear-gradient(145deg, rgba(253,77,29,1) 0%, rgba(255,168,55,1) 70%)
+  light-off: rgb(255, 255, 255, 0.4)
+  light-chip-on: "#464a47"
+  light-chip-off: rgb(179, 179, 179, 0.7)
+  light-icon-on: "#FFF"
+  light-icon-off: rgb(179, 179, 179, 0.7)
+  light-text-on: "#FFF"
+  light-text-off: rgb(179, 179, 179, 0.7)
+  # Text
+  primary-text-color: "#464a47"
+  secondary-text-color: "#000000"
+  text-primary-color: "#FFF"
+  disabled-text-color: "#555"
+  text-dark-color: "#FFF"
+  # Sidebar Menu
+  sidebar-background-color: var(--primary-background-color)
+  sidebar-icon-color: var(--light-primary-color)
+  sidebar-text-color: var(--light-primary-color)
+  sidebar-selected-background-color: var(--primary-background-color)
+  sidebar-selected-icon-color: "#8e8e93"
+  sidebar-selected-text-color: var(--sidebar-selected-icon-color)
+  # States and Badges
+  state-icon-color: "#FFF"
+  state-icon-active-color: "#333333"
+  state-icon-unavailable-color: var(--disabled-text-color)
+  paper-item-icon-active-color: "#333333"
+  # Sliders
+  paper-slider-knob-color: "#FFFFFF"
+  paper-slider-knob-start-color: var(--paper-slider-knob-color)
+  paper-slider-pin-color: var(--paper-slider-knob-color)
+  paper-slider-active-color: "#007aff"
+  paper-slider-secondary-color: var(--paper-slider-knob-color)
+  paper-slider-container-color: rgba(255, 255, 255, 0.5)
+  paper-slider-font-color: "#000"
+  ha-slider-background: none !important
+  # Labels
+  label-badge-background-color: "#23232E"
+  label-badge-text-color: "#F1F1F1"
+  label-badge-red: rgba(255, 149, 9, 0.7)
+  # Cards
+  card-background-color: var(--secondary-background-color)
+  paper-listbox-background-color: var(--primary-background-color)
+  ha-card-border-radius: 20px
+  ha-card-background: rgba(245, 245, 245, 0.4)
+  paper-card-background-color: var(--ha-card-background)
+  rgb-card-background-color: rgb(245, 245, 245)
+  ha-card-border-width: 0
+  # Toggles
+  paper-toggle-button-checked-button-color: "#484848"
+  paper-toggle-button-checked-bar-color: "#484848"
+  paper-toggle-button-unchecked-button-color: var(--paper-toggle-button-checked-button-color)
+  paper-toggle-button-unchecked-bar-color: var(--disabled-text-color)
+  # Table row
+  table-row-background-color: var(--primary-background-color)
+  table-row-alternative-background-color: var(--secondary-background-color)
+  # Switches
+  switch-checked-color: "#30d257"
+  switch-checked-track-color: "#34c759"
+  switch-checked-button-color: "#FFF"
+  # Other
+  paper-dialog-background-color: rgba(200, 200, 200, 0.8)
+  paper-item-icon-color: "#333333"
+  more-info-header-background: rgba(230, 230, 230, 0.5)
+  lumo-body-text-color: var(--primary-text-color)
+  app-header-background-color: rgba(30, 2, 61, 0.4)
+  markdown-code-background-color: "#FFFFFF"
+  code-editor-background-color: "#FFF"
+  clear-background-color: var(--ha-card-background)
+  # Custom
+  mcg-title-letter-spacing: .15em
+  mini-media-player-base-color: white
+  mini-media-player-icon-color: white
+  input-ink-color: var(--primary-text-color)
+  input-fill-color: transparent
+  input-disabled-fill-color: transparent
+  input-label-ink-color: var(--primary-text-color)
+  input-disabled-ink-color: var(--disabled-text-color)
+  input-dropdown-icon-color: var(--primary-text-color)
+  input-idle-line-color: var(--secondary-text-color)
+  input-hover-line-color: var(--secondary-text-color)
+  codemirror-property: var(--accent-color)
+  
+my-light-theme-3:
+  # Global
+  background-image: "center / cover no-repeat fixed url('/local/backgrounds/light/bg3.jpg')"
+  lovelace-background: var(--background-image)
+  primary-color: "#ff9409"
+  light-primary-color: "#2c2c2e"
+  primary-background-color: "#e5e5ea"
+  secondary-background-color: rgba(255, 255, 255, 0.9)
+  divider-color: rgba(142, 142, 147, 0.3)
+  accent-color: rgba(255, 159, 9, 1)
+  icon-farve: "#FFF"
+  icon-farve-2: "#464a47"
+  border-radius-1: 5px
+  box-shadow-on: 0px 2px 5px rgba(0, 0, 0, 0.9)
+  box-shadow-off: 0px 2px 5px rgba(155, 155, 155, 0.9)
+  custom-button-gradient-1: linear-gradient(145deg, rgba(126,109,59,1) 0%, rgba(204,183,128,1) 70%)
+  custom-button-gradient-2: linear-gradient(145deg, rgba(150,0,0,1) 0%, rgba(255,88,46,1) 70%)
+  custom-button-gradient-3: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(92,92,92,1) 70%)
+  custom-button-gradient-4: linear-gradient(145deg, rgba(0,92,0,1) 0%, rgba(0,162,0,1) 70%)
+  custom-button-gradient-5: linear-gradient(145deg, rgba(0,0,140,1) 0%, rgba(88,88,255,1) 70%)
+  custom-button-gradient-6: linear-gradient(145deg, rgba(0,144,193,1) 0%, rgba(51,204,255,1) 70%)
+  custom-button-infobox: rgba(255, 255, 255, 0.3)
+  # Menu
+  menu-background: rgba(255, 255, 255, 0.2)
+  menu-shadow: 0px 0px 60px rgb(34, 37, 42)
+  menu-selected: linear-gradient(145deg, rgba(126,109,59,1) 0%, rgba(204,183,128,1) 70%)
+  menu-selected-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9)
+  menu-justify: center
+  # Light card
+  light-on: linear-gradient(145deg, rgba(126,109,59,1) 0%, rgba(204,183,128,1) 70%)
+  light-off: rgb(255, 255, 255, 0.3)
+  light-chip-on: "#FFF"
+  light-chip-off: rgb(179, 179, 179, 0.7)
+  light-icon-on: "#FFF"
+  light-icon-off: "#464a47"
+  light-text-on: "#FFF"
+  light-text-off: rgb(179, 179, 179, 0.7)
+  # Text
+  primary-text-color: "#464a47"
+  secondary-text-color: "#000000"
+  text-primary-color: "#FFF"
+  disabled-text-color: "#555"
+  text-dark-color: "#FFF"
+  # Sidebar Menu
+  sidebar-background-color: var(--primary-background-color)
+  sidebar-icon-color: var(--light-primary-color)
+  sidebar-text-color: var(--light-primary-color)
+  sidebar-selected-background-color: var(--primary-background-color)
+  sidebar-selected-icon-color: "#8e8e93"
+  sidebar-selected-text-color: var(--sidebar-selected-icon-color)
+  # States and Badges
+  state-icon-color: "#FFF"
+  state-icon-active-color: "#333333"
+  state-icon-unavailable-color: var(--disabled-text-color)
+  paper-item-icon-active-color: "#333333"
+  # Sliders
+  paper-slider-knob-color: "#FFFFFF"
+  paper-slider-knob-start-color: var(--paper-slider-knob-color)
+  paper-slider-pin-color: var(--paper-slider-knob-color)
+  paper-slider-active-color: "#007aff"
+  paper-slider-secondary-color: var(--paper-slider-knob-color)
+  paper-slider-container-color: rgba(255, 255, 255, 0.5)
+  paper-slider-font-color: "#000"
+  ha-slider-background: none !important
+  # Labels
+  label-badge-background-color: "#23232E"
+  label-badge-text-color: "#F1F1F1"
+  label-badge-red: rgba(255, 149, 9, 0.7)
+  # Cards
+  card-background-color: var(--secondary-background-color)
+  paper-listbox-background-color: var(--primary-background-color)
+  ha-card-border-radius: 20px
+  ha-card-background: rgba(245, 245, 245, 0.4)
+  paper-card-background-color: var(--ha-card-background)
+  rgb-card-background-color: rgb(245, 245, 245)
+  ha-card-border-width: 0
+  # Toggles
+  paper-toggle-button-checked-button-color: "#484848"
+  paper-toggle-button-checked-bar-color: "#484848"
+  paper-toggle-button-unchecked-button-color: var(--paper-toggle-button-checked-button-color)
+  paper-toggle-button-unchecked-bar-color: var(--disabled-text-color)
+  # Table row
+  table-row-background-color: var(--primary-background-color)
+  table-row-alternative-background-color: var(--secondary-background-color)
+  # Switches
+  switch-checked-color: "#30d257"
+  switch-checked-track-color: "#34c759"
+  switch-checked-button-color: "#FFF"
+  # Other
+  paper-dialog-background-color: rgba(200, 200, 200, 0.8)
+  paper-item-icon-color: "#333333"
+  more-info-header-background: rgba(230, 230, 230, 0.5)
+  lumo-body-text-color: var(--primary-text-color)
+  app-header-background-color: rgba(30, 2, 61, 0.4)
+  markdown-code-background-color: "#FFFFFF"
+  code-editor-background-color: "#FFF"
+  clear-background-color: var(--ha-card-background)
+  # Custom
+  mcg-title-letter-spacing: .15em
+  mini-media-player-base-color: white
+  mini-media-player-icon-color: white
+  input-ink-color: var(--primary-text-color)
+  input-fill-color: transparent
+  input-disabled-fill-color: transparent
+  input-label-ink-color: var(--primary-text-color)
+  input-disabled-ink-color: var(--disabled-text-color)
+  input-dropdown-icon-color: var(--primary-text-color)
+  input-idle-line-color: var(--secondary-text-color)
+  input-hover-line-color: var(--secondary-text-color)
+  codemirror-property: var(--accent-color)
+  
+my-light-theme-4:
+  # Global
+  background-image: "center / cover no-repeat fixed url('/local/backgrounds/light/bg4.jpg?v=1')"
+  lovelace-background: var(--background-image)
+  primary-color: "#ff9409"
+  light-primary-color: "#2c2c2e"
+  primary-background-color: "#e5e5ea"
+  secondary-background-color: rgba(255, 255, 255, 0.9)
+  divider-color: rgba(142, 142, 147, 0.3)
+  accent-color: rgba(255, 159, 9, 1)
+  icon-farve: "#FFF"
+  icon-farve-2: "#464a47"
+  border-radius-1: 5px
+  box-shadow-on: 0px 2px 5px rgba(0, 0, 0, 0.9)
+  box-shadow-off: 0px 2px 5px rgba(155, 155, 155, 0.9)
+  custom-button-gradient-1: linear-gradient(145deg, rgba(194,103,63,1) 0%, rgba(245,166,131,1) 70%)
+  custom-button-gradient-2: linear-gradient(145deg, rgba(150,0,0,1) 0%, rgba(255,88,46,1) 70%)
+  custom-button-gradient-3: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(92,92,92,1) 70%)
+  custom-button-gradient-4: linear-gradient(145deg, rgba(0,92,0,1) 0%, rgba(0,162,0,1) 70%)
+  custom-button-gradient-5: linear-gradient(145deg, rgba(0,0,140,1) 0%, rgba(88,88,255,1) 70%)
+  custom-button-gradient-6: linear-gradient(145deg, rgba(0,144,193,1) 0%, rgba(51,204,255,1) 70%)
+  custom-button-infobox: rgba(255, 255, 255, 0.3)
+  # Menu
+  menu-background: rgba(255, 255, 255, 0.3)
+  menu-shadow: 0px 0px 60px rgb(34, 37, 42)
+  menu-selected: linear-gradient(145deg, rgba(194,103,63,1) 0%, rgba(245,166,131,1) 70%)
+  menu-selected-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9)
+  menu-justify: center
+  # Light card
+  light-on: linear-gradient(145deg, rgba(194,103,63,1) 0%, rgba(245,166,131,1) 70%)
+  light-off: rgb(255, 255, 255, 0.3)
+  light-chip-on: "#FFF"
+  light-chip-off: rgb(179, 179, 179, 0.7)
+  light-icon-on: "#FFF"
+  light-icon-off: rgb(179, 179, 179, 0.7)
+  light-text-on: "#FFF"
+  light-text-off: rgb(179, 179, 179, 0.7)
+  # Text
+  primary-text-color: "#464a47"
+  secondary-text-color: "#000000"
+  text-primary-color: "#FFF"
+  disabled-text-color: "#555"
+  text-dark-color: "#FFF"
+  # Sidebar Menu
+  sidebar-background-color: var(--primary-background-color)
+  sidebar-icon-color: var(--light-primary-color)
+  sidebar-text-color: var(--light-primary-color)
+  sidebar-selected-background-color: var(--primary-background-color)
+  sidebar-selected-icon-color: "#8e8e93"
+  sidebar-selected-text-color: var(--sidebar-selected-icon-color)
+  # States and Badges
+  state-icon-color: "#FFF"
+  state-icon-active-color: "#333333"
+  state-icon-unavailable-color: var(--disabled-text-color)
+  paper-item-icon-active-color: "#333333"
+  # Sliders
+  paper-slider-knob-color: "#FFFFFF"
+  paper-slider-knob-start-color: var(--paper-slider-knob-color)
+  paper-slider-pin-color: var(--paper-slider-knob-color)
+  paper-slider-active-color: "#007aff"
+  paper-slider-secondary-color: var(--paper-slider-knob-color)
+  paper-slider-container-color: rgba(255, 255, 255, 0.5)
+  paper-slider-font-color: "#000"
+  ha-slider-background: none !important
+  # Labels
+  label-badge-background-color: "#23232E"
+  label-badge-text-color: "#F1F1F1"
+  label-badge-red: rgba(255, 149, 9, 0.7)
+  # Cards
+  card-background-color: var(--secondary-background-color)
+  paper-listbox-background-color: var(--primary-background-color)
+  ha-card-border-radius: 20px
+  ha-card-background: rgba(245, 245, 245, 0.4)
+  paper-card-background-color: var(--ha-card-background)
+  rgb-card-background-color: rgb(245, 245, 245)
+  ha-card-border-width: 0
+  # Toggles
+  paper-toggle-button-checked-button-color: "#484848"
+  paper-toggle-button-checked-bar-color: "#484848"
+  paper-toggle-button-unchecked-button-color: var(--paper-toggle-button-checked-button-color)
+  paper-toggle-button-unchecked-bar-color: var(--disabled-text-color)
+  # Table row
+  table-row-background-color: var(--primary-background-color)
+  table-row-alternative-background-color: var(--secondary-background-color)
+  # Switches
+  switch-checked-color: "#30d257"
+  switch-checked-track-color: "#34c759"
+  switch-checked-button-color: "#FFF"
+  # Other
+  paper-dialog-background-color: rgba(200, 200, 200, 0.8)
+  paper-item-icon-color: "#333333"
+  more-info-header-background: rgba(230, 230, 230, 0.5)
+  lumo-body-text-color: var(--primary-text-color)
+  app-header-background-color: rgba(30, 2, 61, 0.4)
+  markdown-code-background-color: "#FFFFFF"
+  code-editor-background-color: "#FFF"
+  clear-background-color: var(--ha-card-background)
+  # Custom
+  mcg-title-letter-spacing: .15em
+  mini-media-player-base-color: white
+  mini-media-player-icon-color: white
+  input-ink-color: var(--primary-text-color)
+  input-fill-color: transparent
+  input-disabled-fill-color: transparent
+  input-label-ink-color: var(--primary-text-color)
+  input-disabled-ink-color: var(--disabled-text-color)
+  input-dropdown-icon-color: var(--primary-text-color)
+  input-idle-line-color: var(--secondary-text-color)
+  input-hover-line-color: var(--secondary-text-color)
+  codemirror-property: var(--accent-color)
+  
+my-light-theme-5:
+  # Global
+  background-image: "center / cover no-repeat fixed url('/local/backgrounds/light/bg5.jpg')"
+  lovelace-background: var(--background-image)
+  primary-color: "#ff9409"
+  light-primary-color: "#2c2c2e"
+  primary-background-color: "#e5e5ea"
+  secondary-background-color: rgba(255, 255, 255, 0.9)
+  divider-color: rgba(142, 142, 147, 0.3)
+  accent-color: rgba(255, 159, 9, 1)
+  icon-farve: "#FFF"
+  icon-farve-2: "#464a47"
+  border-radius-1: 5px
+  box-shadow-on: 0px 2px 5px rgba(0, 0, 0, 0.9)
+  box-shadow-off: 0px 2px 5px rgba(155, 155, 155, 0.9)
+  custom-button-gradient-1: linear-gradient(145deg, rgba(167,145,129,1) 0%, rgba(217,189,169,1) 70%)
+  custom-button-gradient-2: linear-gradient(145deg, rgba(150,0,0,1) 0%, rgba(255,88,46,1) 70%)
+  custom-button-gradient-3: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(92,92,92,1) 70%)
+  custom-button-gradient-4: linear-gradient(145deg, rgba(0,92,0,1) 0%, rgba(0,162,0,1) 70%)
+  custom-button-gradient-5: linear-gradient(145deg, rgba(0,0,140,1) 0%, rgba(88,88,255,1) 70%)
+  custom-button-gradient-6: linear-gradient(145deg, rgba(0,144,193,1) 0%, rgba(51,204,255,1) 70%)
+  custom-button-infobox: rgba(255, 255, 255, 0.3)
+  # Menu
+  menu-background: rgba(255, 255, 255, 0.1)
+  menu-shadow: 0px 0px 60px rgb(34, 37, 42)
+  menu-selected: linear-gradient(145deg, rgba(167,145,129,1) 0%, rgba(217,189,169,1) 70%)
+  menu-selected-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9)
+  menu-justify: center
+  # Light card
+  light-on: linear-gradient(145deg, rgba(167,145,129,1) 0%, rgba(217,189,169,1) 70%)
+  light-off: rgb(255, 255, 255, 0.3)
+  light-chip-on: "#FFF"
+  light-chip-off: rgb(179, 179, 179, 0.7)
+  light-icon-on: "#FFF"
+  light-icon-off: rgb(179, 179, 179, 0.7)
+  light-text-on: "#FFF"
+  light-text-off: rgb(179, 179, 179, 0.7)
+  # Text
+  primary-text-color: "#464a47"
+  secondary-text-color: "#000000"
+  text-primary-color: "#FFF"
+  disabled-text-color: "#555"
+  text-dark-color: "#FFF"
+  # Sidebar Menu
+  sidebar-background-color: var(--primary-background-color)
+  sidebar-icon-color: var(--light-primary-color)
+  sidebar-text-color: var(--light-primary-color)
+  sidebar-selected-background-color: var(--primary-background-color)
+  sidebar-selected-icon-color: "#8e8e93"
+  sidebar-selected-text-color: var(--sidebar-selected-icon-color)
+  # States and Badges
+  state-icon-color: "#FFF"
+  state-icon-active-color: "#333333"
+  state-icon-unavailable-color: var(--disabled-text-color)
+  paper-item-icon-active-color: "#333333"
+  # Sliders
+  paper-slider-knob-color: "#FFFFFF"
+  paper-slider-knob-start-color: var(--paper-slider-knob-color)
+  paper-slider-pin-color: var(--paper-slider-knob-color)
+  paper-slider-active-color: "#007aff"
+  paper-slider-secondary-color: var(--paper-slider-knob-color)
+  paper-slider-container-color: rgba(255, 255, 255, 0.5)
+  paper-slider-font-color: "#000"
+  ha-slider-background: none !important
+  # Labels
+  label-badge-background-color: "#23232E"
+  label-badge-text-color: "#F1F1F1"
+  label-badge-red: rgba(255, 149, 9, 0.7)
+  # Cards
+  card-background-color: var(--secondary-background-color)
+  paper-listbox-background-color: var(--primary-background-color)
+  ha-card-border-radius: 20px
+  ha-card-background: rgba(245, 245, 245, 0.4)
+  paper-card-background-color: var(--ha-card-background)
+  rgb-card-background-color: rgb(245, 245, 245)
+  ha-card-border-width: 0
+  # Toggles
+  paper-toggle-button-checked-button-color: "#484848"
+  paper-toggle-button-checked-bar-color: "#484848"
+  paper-toggle-button-unchecked-button-color: var(--paper-toggle-button-checked-button-color)
+  paper-toggle-button-unchecked-bar-color: var(--disabled-text-color)
+  # Table row
+  table-row-background-color: var(--primary-background-color)
+  table-row-alternative-background-color: var(--secondary-background-color)
+  # Switches
+  switch-checked-color: "#30d257"
+  switch-checked-track-color: "#34c759"
+  switch-checked-button-color: "#FFF"
+  # Other
+  paper-dialog-background-color: rgba(200, 200, 200, 0.8)
+  paper-item-icon-color: "#333333"
+  more-info-header-background: rgba(230, 230, 230, 0.5)
+  lumo-body-text-color: var(--primary-text-color)
+  app-header-background-color: rgba(30, 2, 61, 0.4)
+  markdown-code-background-color: "#FFFFFF"
+  code-editor-background-color: "#FFF"
+  clear-background-color: var(--ha-card-background)
+  # Custom
+  mcg-title-letter-spacing: .15em
+  mini-media-player-base-color: white
+  mini-media-player-icon-color: white
+  input-ink-color: var(--primary-text-color)
+  input-fill-color: transparent
+  input-disabled-fill-color: transparent
+  input-label-ink-color: var(--primary-text-color)
+  input-disabled-ink-color: var(--disabled-text-color)
+  input-dropdown-icon-color: var(--primary-text-color)
+  input-idle-line-color: var(--secondary-text-color)
+  input-hover-line-color: var(--secondary-text-color)
+  codemirror-property: var(--accent-color)
+
+my-light-theme-6:
+  # Global
+  background-image: "center / cover no-repeat fixed url('/local/backgrounds/light/bg6.jpg?v=3')"
+  lovelace-background: var(--background-image)
+  primary-color: "#ff9409"
+  light-primary-color: "#2c2c2e"
+  primary-background-color: "#e5e5ea"
+  secondary-background-color: rgba(255, 255, 255, 0.9)
+  divider-color: rgba(142, 142, 147, 0.3)
+  accent-color: rgba(255, 159, 9, 1)
+  icon-farve: "#FFF"
+  icon-farve-2: "#464a47"
+  border-radius-1: 5px
+  box-shadow-on: 0px 2px 5px rgba(0, 0, 0, 0.9)
+  box-shadow-off: 0px 2px 5px rgba(155, 155, 155, 0.9)
+  custom-button-gradient-1: linear-gradient(145deg, rgba(106,143,137,1) 0%, rgba(129,187,178,1) 70%)
+  custom-button-gradient-2: linear-gradient(145deg, rgba(150,0,0,1) 0%, rgba(255,88,46,1) 70%)
+  custom-button-gradient-3: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(92,92,92,1) 70%)
+  custom-button-gradient-4: linear-gradient(145deg, rgba(0,92,0,1) 0%, rgba(0,162,0,1) 70%)
+  custom-button-gradient-5: linear-gradient(145deg, rgba(0,0,140,1) 0%, rgba(88,88,255,1) 70%)
+  custom-button-gradient-6: linear-gradient(145deg, rgba(0,144,193,1) 0%, rgba(51,204,255,1) 70%)
+  custom-button-infobox: rgba(255, 255, 255, 0.3)
+  # Menu
+  menu-background: rgba(255, 255, 255, 0.2)
+  menu-shadow: 0px 0px 60px rgb(34, 37, 42)
+  menu-selected: linear-gradient(145deg, rgba(106,143,137,1) 0%, rgba(129,187,178,1) 70%)
+  menu-selected-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9)
+  menu-justify: center
+  # Light card
+  light-on: linear-gradient(145deg, rgba(106,143,137,1) 0%, rgba(129,187,178,1) 70%)
+  light-off: rgb(255, 255, 255, 0.3)
+  light-chip-on: "#FFF"
+  light-chip-off: rgb(179, 179, 179, 0.7)
+  light-icon-on: "#FFF"
+  light-icon-off: rgb(179, 179, 179, 0.7)
+  light-text-on: "#FFF"
+  light-text-off: rgb(179, 179, 179, 0.7)
+  # Text
+  primary-text-color: "#464a47"
+  secondary-text-color: "#000000"
+  text-primary-color: "#FFF"
+  disabled-text-color: "#555"
+  text-dark-color: "#FFF"
+  # Sidebar Menu
+  sidebar-background-color: var(--primary-background-color)
+  sidebar-icon-color: var(--light-primary-color)
+  sidebar-text-color: var(--light-primary-color)
+  sidebar-selected-background-color: var(--primary-background-color)
+  sidebar-selected-icon-color: "#8e8e93"
+  sidebar-selected-text-color: var(--sidebar-selected-icon-color)
+  # States and Badges
+  state-icon-color: "#FFF"
+  state-icon-active-color: "#333333"
+  state-icon-unavailable-color: var(--disabled-text-color)
+  paper-item-icon-active-color: "#333333"
+  # Sliders
+  paper-slider-knob-color: "#FFFFFF"
+  paper-slider-knob-start-color: var(--paper-slider-knob-color)
+  paper-slider-pin-color: var(--paper-slider-knob-color)
+  paper-slider-active-color: "#007aff"
+  paper-slider-secondary-color: var(--paper-slider-knob-color)
+  paper-slider-container-color: rgba(255, 255, 255, 0.5)
+  paper-slider-font-color: "#000"
+  ha-slider-background: none !important
+  # Labels
+  label-badge-background-color: "#23232E"
+  label-badge-text-color: "#F1F1F1"
+  label-badge-red: rgba(255, 149, 9, 0.7)
+  # Cards
+  card-background-color: var(--secondary-background-color)
+  paper-listbox-background-color: var(--primary-background-color)
+  ha-card-border-radius: 20px
+  ha-card-background: rgba(245, 245, 245, 0.4)
+  paper-card-background-color: var(--ha-card-background)
+  rgb-card-background-color: rgb(245, 245, 245)
+  ha-card-border-width: 0
+  # Toggles
+  paper-toggle-button-checked-button-color: "#484848"
+  paper-toggle-button-checked-bar-color: "#484848"
+  paper-toggle-button-unchecked-button-color: var(--paper-toggle-button-checked-button-color)
+  paper-toggle-button-unchecked-bar-color: var(--disabled-text-color)
+  # Table row
+  table-row-background-color: var(--primary-background-color)
+  table-row-alternative-background-color: var(--secondary-background-color)
+  # Switches
+  switch-checked-color: "#30d257"
+  switch-checked-track-color: "#34c759"
+  switch-checked-button-color: "#FFF"
+  # Other
+  paper-dialog-background-color: rgba(200, 200, 200, 0.8)
+  paper-item-icon-color: "#333333"
+  more-info-header-background: rgba(230, 230, 230, 0.5)
+  lumo-body-text-color: var(--primary-text-color)
+  app-header-background-color: rgba(30, 2, 61, 0.4)
+  markdown-code-background-color: "#FFFFFF"
+  code-editor-background-color: "#FFF"
+  clear-background-color: var(--ha-card-background)
+  # Custom
+  mcg-title-letter-spacing: .15em
+  mini-media-player-base-color: white
+  mini-media-player-icon-color: white
+  input-ink-color: var(--primary-text-color)
+  input-fill-color: transparent
+  input-disabled-fill-color: transparent
+  input-label-ink-color: var(--primary-text-color)
+  input-disabled-ink-color: var(--disabled-text-color)
+  input-dropdown-icon-color: var(--primary-text-color)
+  input-idle-line-color: var(--secondary-text-color)
+  input-hover-line-color: var(--secondary-text-color)
+  codemirror-property: var(--accent-color)
