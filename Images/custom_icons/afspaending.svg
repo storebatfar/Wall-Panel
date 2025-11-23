@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0.00 0.00 100.00 100.00">
+<rect fill="#010101" x="47.36" y="3.38" width="5.74" height="16.06" rx="2.73"/>
+<rect fill="#010101" x="-2.87" y="-7.98" transform="translate(22.98,22.74) rotate(-44.6)" width="5.74" height="15.96" rx="2.73"/>
+<rect fill="#010101" x="-2.88" y="-8.01" transform="translate(77.50,22.73) rotate(44.9)" width="5.76" height="16.02" rx="2.79"/>
+<rect fill="#010101" x="-2.88" y="-8.02" transform="translate(50.24,32.17) rotate(-0.1)" width="5.76" height="16.04" rx="2.77"/>
+<rect fill="#010101" x="-2.86" y="-8.03" transform="translate(37.65,37.41) rotate(-45.0)" width="5.72" height="16.06" rx="2.76"/>
+<rect fill="#010101" x="-8.01" y="-2.89" transform="translate(62.83,37.40) rotate(-44.7)" width="16.02" height="5.78" rx="2.80"/>
+<rect fill="#010101" x="3.72" y="47.17" width="15.96" height="5.70" rx="2.62"/>
+<rect fill="#010101" x="-7.97" y="-2.84" transform="translate(32.40,50.04) rotate(0.1)" width="15.94" height="5.68" rx="2.56"/>
+<rect fill="#010101" x="60.06" y="47.18" width="16.06" height="5.72" rx="2.74"/>
+<rect fill="#010101" x="-7.97" y="-2.85" transform="translate(88.81,50.04) rotate(0.1)" width="15.94" height="5.70" rx="2.60"/>
+<rect fill="#010101" x="-8.03" y="-2.87" transform="translate(37.61,62.66) rotate(-45.0)" width="16.06" height="5.74" rx="2.77"/>
+<rect fill="#010101" x="-2.87" y="-8.05" transform="translate(62.85,62.66) rotate(-45.0)" width="5.74" height="16.10" rx="2.79"/>
+<rect fill="#010101" x="-2.88" y="-8.01" transform="translate(50.22,67.89) rotate(-0.1)" width="5.76" height="16.02" rx="2.76"/>
+<rect fill="#010101" x="-7.99" y="-2.89" transform="translate(22.97,77.33) rotate(-44.8)" width="15.98" height="5.78" rx="2.78"/>
+<rect fill="#010101" x="-8.03" y="-2.86" transform="translate(77.52,77.34) rotate(44.8)" width="16.06" height="5.72" rx="2.78"/>
+<rect fill="#010101" x="-2.86" y="-8.02" transform="translate(50.24,88.65) rotate(0.1)" width="5.72" height="16.04" rx="2.74"/>
+</svg>
