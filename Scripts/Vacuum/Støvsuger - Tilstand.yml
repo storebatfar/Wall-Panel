@@ -1,0 +1,41 @@
+alias: "Støvsuger: Tilstand"
+sequence:
+  - action: input_select.select_next
+    metadata: {}
+    data:
+      cycle: true
+    target:
+      entity_id: input_select.stovsuger_tilstand
+  - if:
+      - condition: state
+        entity_id: input_select.stovsuger_tilstand
+        state: Til
+    then:
+      - action: vacuum.set_fan_speed
+        data:
+          fan_speed: balanced
+        target:
+          entity_id: vacuum.roborock_qrevo_edge
+      - action: input_select.select_option
+        metadata: {}
+        data:
+          option: Balanceret
+        target:
+          entity_id: input_select.stovsuger_fan_speed
+  - if:
+      - condition: state
+        entity_id: input_select.stovsuger_tilstand
+        state: Fra
+    then:
+      - action: vacuum.set_fan_speed
+        data:
+          entity_id: vacuum.roborock_qrevo_edge
+          fan_speed: "off"
+      - action: input_select.select_option
+        metadata: {}
+        data:
+          option: Fra
+        target:
+          entity_id: input_select.stovsuger_fan_speed
+description: ""
+icon: mdi:robot-vacuum

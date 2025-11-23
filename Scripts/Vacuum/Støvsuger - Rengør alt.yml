@@ -1,0 +1,67 @@
+alias: "Støvsuger: Rengør alt"
+sequence:
+  - if:
+      - condition: state
+        entity_id: input_select.stovsuger_tilstand
+        state: Støvsug først, vask efter
+    then:
+      - action: scene.create
+        metadata: {}
+        data:
+          scene_id: gulvvask
+          snapshot_entities:
+            - select.roborock_qrevo_edge_moppeintensitet
+            - select.roborock_qrevo_edge_moppetilstand
+      - action: select.select_option
+        metadata: {}
+        data:
+          option: "off"
+        target:
+          entity_id: select.roborock_qrevo_edge_moppeintensitet
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 10
+          milliseconds: 0
+      - device_id: 664886573f03d82c6defe7af646fbed1
+        domain: vacuum
+        entity_id: 35b35902bf90f01e2d3988e3af7611dc
+        type: clean
+      - wait_for_trigger:
+          - trigger: state
+            entity_id:
+              - binary_sensor.roborock_qrevo_edge_cleaning
+            from: "on"
+            to: "off"
+        continue_on_timeout: false
+      - action: scene.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id: scene.gulvvask
+      - action: vacuum.set_fan_speed
+        data:
+          entity_id: vacuum.roborock_qrevo_edge
+          fan_speed: "off"
+      - action: input_select.select_option
+        metadata: {}
+        data:
+          option: Fra
+        target:
+          entity_id: input_select.stovsuger_fan_speed
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 0
+          milliseconds: 500
+      - device_id: 664886573f03d82c6defe7af646fbed1
+        domain: vacuum
+        entity_id: 35b35902bf90f01e2d3988e3af7611dc
+        type: clean
+    else:
+      - device_id: 664886573f03d82c6defe7af646fbed1
+        domain: vacuum
+        entity_id: 35b35902bf90f01e2d3988e3af7611dc
+        type: clean
+description: Start rengøring af all rum.
+icon: mdi:home

@@ -1,0 +1,201 @@
+alias: "Støvsuger: Start rengøring"
+sequence:
+  - if:
+      - condition: state
+        entity_id: input_boolean.stovsuger_garage
+        state: "off"
+      - condition: state
+        entity_id: input_boolean.stovsuger_entre
+        state: "off"
+      - condition: state
+        entity_id: input_boolean.stovsuger_lille_bad
+        state: "off"
+      - condition: state
+        entity_id: input_boolean.stovsuger_christine
+        state: "off"
+      - condition: state
+        entity_id: input_boolean.stovsuger_julian
+        state: "off"
+      - condition: state
+        entity_id: input_boolean.stovsuger_kokken
+        state: "off"
+      - condition: state
+        entity_id: input_boolean.stovsuger_spisestue
+        state: "off"
+      - condition: state
+        entity_id: input_boolean.stovsuger_kontor
+        state: "off"
+      - condition: state
+        entity_id: input_boolean.stovsuger_sovevaerelse
+        state: "off"
+      - condition: state
+        entity_id: input_boolean.stovsuger_badevaerelse
+        state: "off"
+      - condition: state
+        entity_id: input_boolean.stovsuger_stue
+        state: "off"
+    then:
+      - action: script.stovsuger_rengor_alt
+        metadata: {}
+        data: {}
+    else:
+      - if:
+          - condition: state
+            entity_id: input_select.stovsuger_tilstand
+            state: Støvsug -> vask
+        then:
+          - action: scene.create
+            metadata: {}
+            data:
+              scene_id: gulvvask
+              snapshot_entities:
+                - select.roborock_qrevo_edge_moppeintensitet
+                - select.roborock_qrevo_edge_moppetilstand
+          - action: select.select_option
+            metadata: {}
+            data:
+              option: standard
+            target:
+              entity_id: select.roborock_qrevo_edge_moppetilstand
+          - action: select.select_option
+            data:
+              option: "off"
+            target:
+              entity_id: select.roborock_qrevo_edge_moppeintensitet
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 1
+            enabled: true
+          - action: vacuum.send_command
+            metadata: {}
+            data:
+              command: app_segment_clean
+              params:
+                - segments: >
+                    {% set rooms = {
+                      "input_boolean.stovsuger_garage": 8,
+                      "input_boolean.stovsuger_entre": 13,
+                      "input_boolean.stovsuger_badevaerelse": 2,
+                      "input_boolean.stovsuger_christine": 5,
+                      "input_boolean.stovsuger_julian": 7,
+                      "input_boolean.stovsuger_lille_bad": 6,
+                      "input_boolean.stovsuger_kontor": 10,
+                      "input_boolean.stovsuger_sovevaerelse": 11,
+                      "input_boolean.stovsuger_kokken": 1,
+                      "input_boolean.stovsuger_spisestue": 9,
+                      "input_boolean.stovsuger_stue": 12
+                    } %} {% set ns = namespace(room_numbers=[]) %} {% for room,
+                    segment in rooms.items() %} {% if is_state(room, 'on') %} {%
+                    set ns.room_numbers = ns.room_numbers + [segment] %} {%
+                    endif %} {% endfor %} {{ ns.room_numbers }}
+                  repeat: |
+                    {{ states('input_select.stovsuger_repeats') }}
+            target:
+              entity_id: vacuum.roborock_qrevo_edge
+          - wait_for_trigger:
+              - trigger: state
+                entity_id:
+                  - binary_sensor.roborock_qrevo_edge_cleaning
+                from: "on"
+                to: "off"
+            continue_on_timeout: false
+          - action: scene.turn_on
+            metadata: {}
+            data: {}
+            target:
+              entity_id: scene.gulvvask
+          - action: vacuum.set_fan_speed
+            data:
+              entity_id: vacuum.roborock_qrevo_edge
+              fan_speed: "off"
+          - action: input_select.select_option
+            metadata: {}
+            data:
+              option: Fra
+            target:
+              entity_id: input_select.stovsuger_fan_speed
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 0
+              milliseconds: 500
+          - action: vacuum.send_command
+            metadata: {}
+            data:
+              command: app_segment_clean
+              params:
+                - segments: >
+                    {% set rooms = {
+                      "input_boolean.stovsuger_garage": 8,
+                      "input_boolean.stovsuger_entre": 13,
+                      "input_boolean.stovsuger_badevaerelse": 2,
+                      "input_boolean.stovsuger_christine": 5,
+                      "input_boolean.stovsuger_julian": 7,
+                      "input_boolean.stovsuger_lille_bad": 6,
+                      "input_boolean.stovsuger_kontor": 10,
+                      "input_boolean.stovsuger_sovevaerelse": 11,
+                      "input_boolean.stovsuger_kokken": 1,
+                      "input_boolean.stovsuger_spisestue": 9,
+                      "input_boolean.stovsuger_stue": 12
+                    } %} {% set ns = namespace(room_numbers=[]) %} {% for room,
+                    segment in rooms.items() %} {% if is_state(room, 'on') %} {%
+                    set ns.room_numbers = ns.room_numbers + [segment] %} {%
+                    endif %} {% endfor %} {{ ns.room_numbers }}
+                  repeat: |
+                    {{ states('input_select.stovsuger_repeats') }}
+            target:
+              entity_id: vacuum.roborock_qrevo_edge
+          - wait_for_trigger:
+              - trigger: state
+                entity_id:
+                  - binary_sensor.roborock_qrevo_edge_cleaning
+                to: "on"
+            timeout:
+              hours: 0
+              minutes: 5
+              seconds: 0
+              milliseconds: 0
+            enabled: true
+            continue_on_timeout: true
+        else:
+          - action: vacuum.send_command
+            metadata: {}
+            data:
+              command: app_segment_clean
+              params:
+                - segments: >
+                    {% set rooms = {
+                      "input_boolean.stovsuger_garage": 8,
+                      "input_boolean.stovsuger_entre": 5,
+                      "input_boolean.stovsuger_badevaerelse": 2,
+                      "input_boolean.stovsuger_christine": 13,
+                      "input_boolean.stovsuger_julian": 7,
+                      "input_boolean.stovsuger_lille_bad": 6,
+                      "input_boolean.stovsuger_kontor": 10,
+                      "input_boolean.stovsuger_sovevaerelse": 11,
+                      "input_boolean.stovsuger_kokken": 1,
+                      "input_boolean.stovsuger_spisestue": 9,
+                      "input_boolean.stovsuger_stue": 12
+                    } %} {% set ns = namespace(room_numbers=[]) %} {% for room,
+                    segment in rooms.items() %} {% if is_state(room, 'on') %} {%
+                    set ns.room_numbers = ns.room_numbers + [segment] %} {%
+                    endif %} {% endfor %} {{ ns.room_numbers }}
+                  repeat: |
+                    {{ states('input_select.stovsuger_repeats') }}
+            target:
+              entity_id: vacuum.roborock_qrevo_edge
+          - wait_for_trigger:
+              - trigger: state
+                entity_id:
+                  - binary_sensor.roborock_qrevo_edge_cleaning
+                to: "on"
+            timeout:
+              hours: 0
+              minutes: 5
+              seconds: 0
+              milliseconds: 0
+            enabled: true
+            continue_on_timeout: true
+description: Starter støvsugeren for rengøring af rum.
+icon: mdi:robot-vacuum
