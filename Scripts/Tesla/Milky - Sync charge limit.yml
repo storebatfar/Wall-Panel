@@ -1,0 +1,18 @@
+sequence:
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+  - action: number.set_value
+    metadata: {}
+    data:
+      value: "{{ states('input_number.milky_charge_limit') | float }}"
+    target:
+      entity_id: number.milky_charge_limit
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+alias: "Milky: Sync charge limit"
+description: ""
+mode: restart

@@ -1,0 +1,17 @@
+alias: "Milky: Start Manuel Opladning"
+sequence:
+  - data: {}
+    target:
+      entity_id: button.milky_smart_charging_manually_start_charging
+    action: button.press
+  - wait_for_trigger:
+      - trigger: state
+        entity_id:
+          - sensor.johansen_status
+        to: charging
+    timeout:
+      hours: 0
+      minutes: 1
+      seconds: 0
+      milliseconds: 0
+mode: restart

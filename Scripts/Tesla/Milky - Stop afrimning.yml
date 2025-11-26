@@ -1,0 +1,24 @@
+alias: "Milky: Stop afrimning"
+sequence:
+  - action: climate.turn_off
+    target:
+      entity_id: climate.milky_climate
+    data: {}
+  - action: script.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: script.milky_start_afrimning
+  - wait_for_trigger:
+      - trigger: state
+        entity_id:
+          - climate.milky_climate
+        to: "off"
+    timeout:
+      hours: 0
+      minutes: 1
+      seconds: 0
+      milliseconds: 0
+mode: restart
+description: ""
+icon: mdi:car-defrost-front

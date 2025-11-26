@@ -1,0 +1,23 @@
+sequence:
+  - action: climate.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: climate.milky_climate
+  - action: script.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: script.milky_start_klima
+  - wait_for_trigger:
+      - trigger: state
+        entity_id:
+          - climate.milky_climate
+        to: "off"
+    timeout:
+      hours: 0
+      minutes: 1
+      seconds: 0
+      milliseconds: 0
+alias: "Milky: Stop klima"
+description: ""
