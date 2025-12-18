@@ -1,4 +1,4 @@
-# Vejr Template Sensorer
+# Weather Template Sensorer
 - trigger:
     - platform: time_pattern
       minutes: "/15"
@@ -21,38 +21,51 @@
     - name: Vejrudsigt Hjemme
       unique_id: vejrudsigt_hjemme
       state: "{{ now().isoformat() }}"
+      variables:
+        current: >
+          {% set fc = hourly['weather.forecast_hjem'].forecast %}
+          {% set now_iso = now().isoformat() %}
+          {# all forecasts at or before now #}
+          {% set past = fc
+               | selectattr('datetime', '<=', now_iso)
+               | list %}
+          {% if past | length > 0 %}
+            {{ past[-1] }}
+          {% else %}
+            {{ fc[0] }}
+          {% endif %}
       attributes:
         now_condition: >
           {% from 'weather_translate.jinja' import translate_condition %}
-          {{ translate_condition(hourly['weather.forecast_hjem'].forecast[0].condition) }}
+          {{ translate_condition(current.condition) }}
         now_icon: >
-          {% set weather = hourly['weather.forecast_hjem'].forecast[0].condition %}
+          {% set weather = current.condition %}
           {% if is_state('sun.sun', 'above_horizon') %}
-          {{ '/local/weather/' + weather + '.svg' }}
+            {{ '/local/weather/' + weather + '.svg' }}
           {% else %}
-          {{ '/local/weather/' + weather + '_night.svg' }}
+            {{ '/local/weather/' + weather + '_night.svg' }}
           {% endif %}
-        now_temp: "{{ hourly['weather.forecast_hjem'].forecast[0].temperature }}"
-        now_wind_speed: "{{ hourly['weather.forecast_hjem'].forecast[0].wind_speed }}"
-        now_wind_gust_speed: "{{ hourly['weather.forecast_hjem'].forecast[0].wind_gust_speed }}"
-        now_wind_bearing: "{{ hourly['weather.forecast_hjem'].forecast[0].wind_bearing }}"
-        now_precipitation: "{{ hourly['weather.forecast_hjem'].forecast[0].precipitation }}"
-        now_precipitation_probability: "{{ hourly['weather.forecast_hjem'].forecast[0].precipitation_probability }}"
-        now_humidity: "{{ hourly['weather.forecast_hjem'].forecast[0].humidity }}"
-        now_uv_index: "{{ hourly['weather.forecast_hjem'].forecast[0].uv_index }}"
+        now_temp: "{{ current.temperature }}"
+        now_wind_speed: "{{ current.wind_speed }}"
+        now_wind_gust_speed: "{{ current.wind_gust_speed }}"
+        now_wind_bearing: "{{ current.wind_bearing }}"
+        now_precipitation: "{{ current.precipitation }}"
+        now_precipitation_probability: "{{ current.precipitation_probability }}"
+        now_humidity: "{{ current.humidity }}"
+        now_uv_index: "{{ current.uv_index }}"
         now_feels_like: >
-          {% set T = (hourly['weather.forecast_hjem'].forecast[0].temperature | float) %}
-          {% set K = (hourly['weather.forecast_hjem'].forecast[0].wind_speed | float) %}
-          {% set V = (K/1000*60*60) %}
+          {% set T = (current.temperature | float) %}
+          {% set K = (current.wind_speed | float) %}
+          {% set V = (K / 1000 * 60 * 60) %}
           {% set A = 13.12 + 0.6215*T - 11.37*(V**0.16) + 0.3965*T*(V**0.16) %}
-          {{ (A) | round(1) }}
+          {{ A | round(1) }}
         now_wind_direction: >
           {% set direction = ['N','NNØ','NØ','ØNØ','Ø','ØSØ','SØ','SSØ','S','SSV','SV','VSV','V','VNV','NV','NNV','N'] %}
-          {% set degree = (hourly['weather.forecast_hjem'].forecast[0].wind_bearing | float) %}
-          {{ direction[((degree+11.25)/22.5)|int] }}
+          {% set degree = (current.wind_bearing | float) %}
+          {{ direction[((degree + 11.25) / 22.5) | int] }}
         now_wind_description: >
           {% from 'weather_wind_speed.jinja' import get_wind_description %}
-          {{ get_wind_description(hourly['weather.forecast_hjem'].forecast[0].wind_speed | float) }}
+          {{ get_wind_description(current.wind_speed | float) }}
         today_condition: >
           {% from 'weather_translate.jinja' import translate_condition %}
           {{ translate_condition(daily['weather.forecast_hjem'].forecast[0].condition) }}
@@ -226,3 +239,9 @@
         forecast5_wind_description: >
           {% from 'weather_wind_speed.jinja' import get_wind_description %}
           {{ get_wind_description(daily['weather.forecast_hjem'].forecast[5].wind_speed | float) }}
+        hourly_forecast_times: >
+          {% set hours = hourly['weather.forecast_hjem'].forecast[0:24] %}
+          {{ hours | map(attribute='datetime') | list }}
+        hourly_forecast_temperatures: >
+          {% set hours = hourly['weather.forecast_hjem'].forecast[0:24] %}
+          {{ hours | map(attribute='temperature') | list }}
